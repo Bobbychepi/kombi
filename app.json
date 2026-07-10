@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "Kombi",
+    "slug": "kombi",
+    "version": "1.0.0",
+    "description": "A South African taxi route and pickup-point app.",
+    "platforms": ["ios", "android"],
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "kombi",
+    "userInterfaceStyle": "light",
+    "primaryColor": "#171A18",
+    "backgroundColor": "#FAFAF7",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.bobbychepi.kombi",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Kombi uses your location to find nearby taxi routes and pickup points."
+      }
+    },
+    "android": {
+      "package": "com.bobbychepi.kombi",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#FAFAF7",
+        "foregroundImage": "./assets/images/android-icon-foreground.png"
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#FAFAF7"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Allow Kombi to use your location to find nearby taxi routes and pickup points."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
